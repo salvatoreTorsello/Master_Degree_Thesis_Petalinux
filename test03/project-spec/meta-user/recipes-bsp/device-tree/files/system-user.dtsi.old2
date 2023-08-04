@@ -1,0 +1,42 @@
+/include/ "system-conf.dtsi"
+
+/ {
+	chosen {
+		bootargs = "clk_ignore_unused console=ttyPS0,115200 earlyprintk root=/dev/mmcblk0p2 rw rootwait";
+	};
+
+
+};
+
+
+/delete-node/ &axi_gpio_1_negEdgeIp_axi_gpio_1;
+
+
+/ {
+
+	amba_pl {
+		gpio@40010000 {
+			#gpio-cells = <2>;
+			#interrupt-cells = <2>;
+			clock-names = "s_axi_aclk";
+			clocks = <0x01 0x0f>;
+			compatible = "gpio-ebaz-lkmTest02";
+			gpio-controller;
+			reg = <0x40010000 0x10000>;
+			interrupt-names = "o_pulse_0";
+			interrupt-parent = <0x04>;
+			interrupts = <0x00 0x1e 0x01>;
+		};
+
+		test_peripherals@40020000 {
+                        interrupts = <0x00 0x1d 0x01>;
+                };
+
+	
+	};
+
+	__symbols__ {
+		axi_gpio_1_negEdgeIp = "/amba_pl/gpio@40010000";
+	};
+
+};

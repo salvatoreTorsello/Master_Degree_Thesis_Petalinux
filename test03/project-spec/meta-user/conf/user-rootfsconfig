@@ -1,0 +1,12 @@
+#Note: Mention Each package in individual line
+#These packages will get added into rootfs menu entry
+
+CONFIG_gpio-demo
+CONFIG_peekpoke
+CONFIG_mymoduleTest1
+CONFIG_lkmTest01
+CONFIG_lkmTest02
+CONFIG_lkmTest03
+CONFIG_lkmTest04
+CONFIG_appTest04
+CONFIG_lkmTest05

@@ -1,0 +1,22 @@
+/include/ "system-conf.dtsi"
+
+/ {
+	chosen {
+		bootargs = "clk_ignore_unused console=ttyPS0,115200 earlyprintk root=/dev/mmcblk0p2 rw rootwait uio_pdrv_genirq.of_id=generic-uio";
+	};
+
+
+	amba_pl {
+		gpio@40010000 {
+			compatible = "generic-uio", "etx-sw";
+			interrupts = <0 0x1e 0x01>;
+		};
+	
+		test_peripherals@40020000 {
+			compatible = "generic-uio", "test-peripherals-2.0";
+			interrupts = <0x00 0x1d 0x01>;
+		};
+	};
+
+	
+};

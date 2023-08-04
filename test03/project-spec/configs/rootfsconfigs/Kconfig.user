@@ -1,0 +1,38 @@
+menu "user packages " 
+config appTest04  
+	 bool "appTest04"
+	 help
+	
+config gpio-demo  
+	 bool "gpio-demo"
+	 help
+	
+config lkmTest01  
+	 bool "lkmTest01"
+	 help
+	
+config lkmTest02  
+	 bool "lkmTest02"
+	 help
+	
+config lkmTest03  
+	 bool "lkmTest03"
+	 help
+	
+config lkmTest04  
+	 bool "lkmTest04"
+	 help
+	
+config lkmTest05  
+	 bool "lkmTest05"
+	 help
+	
+config mymoduleTest1  
+	 bool "mymoduleTest1"
+	 help
+	
+config peekpoke  
+	 bool "peekpoke"
+	 help
+	
+endmenu
